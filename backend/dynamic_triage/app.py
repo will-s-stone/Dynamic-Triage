@@ -1,12 +1,20 @@
+from pymongo.mongo_client import MongoClient
+from pymongo.server_api import ServerApi
 from flask import Flask
-from pymongo import MongoClient
 
 app = Flask(__name__)
 
-# Connect to MongoDB Atlas
-client = MongoClient('mongodb+srv://<your_username>:<your_password>@<your_cluster>.mongodb.net/<your_database>?retryWrites=true&w=majority')
-db = client.your_database
+uri = "mongodb+srv://stonew9799:0JkLuIc2ThPExqyk@hophack-cluster.ulbgg.mongodb.net/?retryWrites=true&w=majority&appName=hophack-cluster"
+# Create a new client and connect to the server
+client = MongoClient(uri, server_api=ServerApi('1'))
+# Send a ping to confirm a successful connection
+try:
+    client.admin.command('ping')
+    print("Pinged your deployment. You successfully connected to MongoDB!")
+except Exception as e:
+    print(e)
 
+db = client.your_database
 @app.route('/')
 def hello_world():
     return 'Hello, World!'
