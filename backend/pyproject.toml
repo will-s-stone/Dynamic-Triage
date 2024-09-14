@@ -6,7 +6,7 @@ authors = ["will-s-stone <will@williamstone.me>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.12"
+python = "^3.9"
 flask = "^3.0.3"
 pymongo = "^4.8.0"
 transformers = "^4.44.2"
