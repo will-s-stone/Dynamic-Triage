@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - Telemedicine Service</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/styles.css') }}"
+    />
+  </head>
+  <body>
+    <!-- Header Section -->
+    <section class="hero is-light">
+      <div class="hero-body">
+        <div class="container">
+          <div class="columns is-vcentered">
+            <!-- Logo -->
+            <div class="column is-4">
+              <img
+                src="{{ url_for('static', filename='images/logo.png') }}"
+                alt="Telemedicine Logo"
+                style="max-height: 80px"
+              />
+            </div>
+            <!-- Navigation -->
+            <div class="column is-8">
+              <nav class="level">
+                <p class="level-item has-text-centered"><a href="#">Home</a></p>
+                <p class="level-item has-text-centered">
+                  <a href="#">About Us</a>
+                </p>
+                <p class="level-item has-text-centered">
+                  <a href="#">OPD Timings</a>
+                </p>
+                <p class="level-item has-text-centered">
+                  <a href="#">Gallery</a>
+                </p>
+                <p class="level-item has-text-centered"><a href="#">FAQs</a></p>
+                <p class="level-item has-text-centered">
+                  <a href="#">Support</a>
+                </p>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Section -->
+    <section class="section">
+      <div class="container">
+        <div class="columns">
+          <!-- Login/Register Box -->
+          <div class="column is-6">
+            <div class="box">
+              <h2 class="title is-4">National Telemedicine Service</h2>
+              <div class="tabs is-toggle is-fullwidth">
+                <ul>
+                  <li class="is-active"><a>Login</a></li>
+                  <li><a>Register</a></li>
+                </ul>
+              </div>
+              <div class="field">
+                <label class="label">Email/Mobile/ABHA</label>
+                <div class="control">
+                  <input
+                    class="input"
+                    type="email"
+                    placeholder="Enter your details"
+                  />
+                </div>
+              </div>
+              <div class="field is-grouped">
+                <p class="control">
+                  <button class="button is-warning">OTP</button>
+                </p>
+                <p class="control">
+                  <button class="button is-primary">Password</button>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Images Section -->
+          <div class="column is-6">
+            <figure class="image is-4by3">
+              <img
+                src="{{ url_for('static', filename='images/doctor1.jpg') }}"
+                alt="Doctor"
+              />
+            </figure>
+            <figure class="image is-4by3">
+              <img
+                src="{{ url_for('static', filename='images/doctor2.jpg') }}"
+                alt="Doctor"
+              />
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
