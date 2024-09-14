@@ -3,43 +3,72 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>sanjeevnie</title>
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="{{ url_for('static', filename='css/styles.css') }}"
-    />
+    <title>patient</title>
+    <link rel="stylesheet" href="../assets/css/patient.css" />
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary"></nav>
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">E-sanjeevni</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-        </li>
-      </ul>
+    <nav id="whitenav">
+      <img src="../assets/images/header_logo.svg" />
+      <img src="../assets/images/mohfw.svg" />
+      <div id="right-side">
+        <a id="consult" href="#">Consult Now</a>
+        <select
+          id="translation"
+          name="languages"
+          style="padding: 10px; margin: 0 10px"
+        >
+          <option value="en">English</option>
+          <option value="fr">Hindi</option>
+          <option value="es">Marathi</option>
+          <option value="de">Gujrati</option>
+        </select>
+        <a id="profile" href="#">
+          <img src="../assets/images/profile.svg" />
+        </a>
+      </div>
+    </nav>
+    <nav id="greennav">
+      <h3>Consultancy</h3>
+      <button id="dashboard">Dashboard</button>
+      <button id="history">History</button>
+      <button id="family-info">Family Info</button>
+    </nav>
+    <div class="container">
+      <div id="sidenav">
+        <div id="general-info-btl">
+          <img src="../assets/images/checkmark1.svg" />
+          <div class="btl-container">
+            <h5>General Information</h5>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
+              doloribus
+            </p>
+          </div>
+        </div>
+        <div id="chat-bt2">
+          <img src="../assets/images/checkmark1.svg" />
+          <div class="btl-container">
+            <h5>Chat Consultancy</h5>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
+              doloribus
+            </p>
+          </div>
+        </div>
+        <div id="Report-bt3">
+          <img src="../assets/images/checkmark1.svg" />
+          <div class="btl-container">
+            <h5>Report</h5>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
+              doloribus
+            </p>
+          </div>
+        </div>
+      </div>
+      <section id="patient-info"></section>
+      <section id="chat-box"></section>
+      <section id="report"></section>
     </div>
-  </div>
-</nav>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   </body>
 </html>
