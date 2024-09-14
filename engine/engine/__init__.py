@@ -1,8 +1,13 @@
-# Use a pipeline as a high-level helper
 from transformers import pipeline
+from flask import Flask, request, jsonify
+import torch
+
+app = Flask(__name__)
 
 pipe = pipeline("summarization", model="Falconsai/medical_summarization", device=0)
 
+
+if torch.backends
 txt = ("Jane Doe, a 34-year-old female, has a medical history that includes asthma diagnosed at age 10, "
        "seasonal allergies, and recent hypertension. She reports experiencing a persistent dry cough for the past "
        "two weeks, accompanied by shortness of breath, particularly during physical activity, occasional wheezing, "
