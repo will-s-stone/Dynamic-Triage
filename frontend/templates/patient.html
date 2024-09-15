@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>patient</title>
+    <link rel="stylesheet" href="../assets/css/patient.css" />
+  </head>
+  <body>
+    <nav id="whitenav">
+      <img src="../assets/images/header_logo.svg" />
+      <img src="../assets/images/mohfw.svg" />
+      <div id="right-side">
+        <a id="consult" href="#">Consult Now</a>
+        <select
+          id="translation"
+          name="languages"
+          style="padding: 10px; margin: 0 10px"
+        >
+          <option value="en">English</option>
+          <option value="fr">Hindi</option>
+          <option value="es">Marathi</option>
+          <option value="de">Gujrati</option>
+        </select>
+        <a id="profile" href="#">
+          <img src="../assets/images/profile.svg" />
+        </a>
+      </div>
+    </nav>
+    <nav id="greennav">
+      <h3>Spoke Dashboard</h3>
+      <button id="dashboard">Dashboard</button>
+      <button id="history">History</button>
+      <button id="family-info">Family Info</button>
+    </nav>
+    <div class="container">
+      <div id="sidenav">
+        <div id="patientinfo-btn" class="sidenav-btn">
+          <img src="../assets/images/checkmark1.svg" />
+          <div class="btl-container">
+            <h5>General Information</h5>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          </div>
+        </div>
+        <div id="chatbox-btn" class="sidenav-btn">
+          <img src="../assets/images/checkmark1.svg" />
+          <div class="btl-container">
+            <h5>Chat Consultancy</h5>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          </div>
+        </div>
+        <div id="report-btn" class="sidenav-btn">
+          <img src="../assets/images/checkmark1.svg" />
+          <div class="btl-container">
+            <h5>Report</h5>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          </div>
+        </div>
+      </div>
+      <div id="content">
+        <section id="patientinfo">
+          <h1>Abha ID Login</h1>
+        </section>
+        <section id="chatbox">
+          <h1>AI Chatbox</h1>
+          <div class="chat-container">
+            <div class="chat-box">
+              <div class="chat-message ai-message">
+                <div class="avatar">AI</div>
+                <p class="message-content">Hi, How are you feeling today?</p>
+              </div>
+              <!-- Add more messages as needed -->
+            </div>
+            <form class="message-form">
+              <input type="text" placeholder="Type your message here..." />
+              <button type="submit">Send</button>
+            </form>
+          </div>
+        </section>
+        <section id="report"><h1>Report</h1></section>
+      </div>
+    </div>
+
+    <script src="../assets/js/patient.js"></script>
+  </body>
+</html>

@@ -1,0 +1,193 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+#whitenav {
+  background-color: #ffffff; /* White background */
+  display: flex;
+  align-items: center;
+  padding: 10px 20px; /* Adjust padding as needed */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+#whitenav img {
+  height: 50px; /* Adjust based on your preference */
+  margin-right: 20px; /* Space between logo and MOHFW logo */
+}
+
+#whitenav button:hover {
+  background-color: #0f6b06; /* Darker green on hover */
+}
+
+#right-side {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+/* Styles for Green Navigation */
+#greennav {
+  background-color: #138808; /* Green background */
+  display: flex;
+  align-items: center;
+  padding: 10px 20px; /* Adjust padding as needed */
+  color: #ffffff; /* White text */
+}
+
+#greennav h3 {
+  flex-grow: 1; /* Makes the heading take up the remaining space */
+  margin: 0; /* Remove default margin */
+  font-size: 20px; /* Adjust font size as needed */
+}
+
+/* Style for buttons in green navigation */
+#greennav button {
+  background-color: #ffffff; /* White background for buttons */
+  color: #138808; /* Green text to match the nav background */
+  border: 2px solid #ffffff; /* White border */
+  padding: 10px 20px;
+  margin-left: 10px; /* Space between buttons */
+  cursor: pointer; /* Cursor indicates it's clickable */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+}
+
+#greennav button:hover {
+  background-color: #0f6b06; /* Darker green on hover */
+  color: #ffffff; /* White text on hover */
+}
+
+/* Container for the whole page */
+.container {
+  display: flex; /* Makes child elements (sidebar and sections) align horizontally */
+}
+
+/* Styles for the Sidebar */
+#sidenav {
+  background-color: #ff9933; /* Orange background */
+  width: 250px; /* Adjust width as needed */
+  padding: 20px; /* Padding inside the sidebar */
+  box-sizing: border-box; /* Includes padding in width calculation */
+  height: 100vh; /* Full height to match the viewport */
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+}
+
+/* Styles for each block in the sidebar */
+#sidenav > div {
+  margin-bottom: 20px; /* Space between blocks */
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Image styles */
+
+#sidenav img {
+  width: 24px; /* Smaller width for SVG icons */
+  height: 24px; /* Smaller height for SVG icons */
+  margin-bottom: 10px; /* Space below the image */
+}
+
+/* Container for text and heading */
+.btl-container {
+  padding: 10px; /* Padding around text */
+}
+
+/* Heading styles */
+.btl-container h5 {
+  margin-top: 0; /* Remove top margin */
+  color: #ffffff; /* Dark green color for headings */
+  font-size: medium;
+}
+
+/* Paragraph styles */
+.btl-container p {
+  color: #ffffff; /* Gray color for paragraph text */
+  font-size: 10px; /* Smaller font size for details */
+}
+
+#content {
+  flex-grow: 1; /* Makes the content take up the remaining space */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: stretch;
+}
+
+#content section{
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  display: none;
+align-items: center;
+}
+
+
+/* chatbox styling */
+
+.chat-container {
+  width: 90%;
+  max-width: 800px;
+  margin: 50px auto;
+  border: 2px solid #c1e1e1;
+  border-radius: 8px;
+  background-color: #c8e6c9; /* Light green background */
+}
+
+.chat-box {
+  padding: 10px;
+  height: 60vh;
+  overflow-y: auto; /* Makes it scrollable */
+}
+
+.chat-message {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.ai-message .avatar {
+  width: 30px;
+  height: 30px;
+  background-color: #ffad33; /* Orange background for avatar */
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+}
+
+.message-content {
+  background-color: white;
+  padding: 8px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.message-form {
+  display: flex;
+  padding: 10px;
+}
+
+.message-form input {
+  flex: 1;
+  padding: 10px;
+  margin-right: 10px;
+  border: 2px solid #c1e1e1;
+  border-radius: 4px;
+}
+
+.message-form button {
+  padding: 10px 20px;
+  background-color: #4caf50; /* Green background */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.message-form button:hover {
+  background-color: #45a049;
+}
+
