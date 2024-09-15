@@ -5,7 +5,7 @@ import torch
 app = Flask(__name__)
 
 # Initialize the summarization pipeline
-pipe = pipeline("summarization", model="Falconsai/medical_summarization")
+pipe = pipeline("summarization", model="Falconsai/medical_summarization", max_length=1000, min_length=30)
 
 # Move the model to CPU
 device = "cpu"

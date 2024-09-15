@@ -1,27 +1,25 @@
-FROM python:3.9-slim
+FROM python:3.9
 
-LABEL authors="williamstone"
-
-# Install build dependencies
-RUN apt-get update && \
-    apt-get install -y \
-    pkg-config \
+# Install dependencies for h5py (HDF5 and other required libraries)
+RUN apt-get update && apt-get install -y \
     libhdf5-dev \
-    build-essential \
+    gcc \
     && rm -rf /var/lib/apt/lists/*
 
-# Install Poetry
-RUN pip install poetry==1.8.0
 
-WORKDIR /app
+RUN pip install poetry
 
-# Copy the Poetry configuration and install dependencies
-COPY pyproject.toml poetry.lock* ./
-RUN poetry install --no-root
-
-# Copy the application code
 COPY . .
 
-# Set the entrypoint
-ENTRYPOINT ["top", "-b"]
+RUN poetry install
+
+ENV FLASK_APP=engine
+
+# Expose the Flask port
+EXPOSE 5000
+
+# Run Flask app
+CMD ["poetry", "run", "flask", "run", "--host=0.0.0.0", "--port=5000"]
+
+
 
