@@ -10,26 +10,21 @@ def query_llm(patient_info):
     Uses the Anthropic API (Claude) to process patient information.
     """
     try:
-        response = client.completions.create(
+        response = client.messages.create(
             model="claude-3-5-sonnet-20240620",
-            max_tokens=1024,
-            temperature=1,
-            system="You are assisting a non-medical expert in triaging patients. Collect necessary information for diagnosis.",
+            max_tokens=2048,
+            temperature=0.5,
+            system="You are assisting a non-medical expert in triaging patients. Collect necessary information for "
+                   "diagnosis.",
             messages=[
                 {
                     "role": "user",
-                    "content": [
-                        {
-                            "type": "text",
-                            "text": f"Patient information: {patient_info}. What additional info do you need for diagnosis?"
-                        }
-                    ]
+                    "content": f"Patient information: {patient_info}. What additional info do you need for diagnosis?"
                 }
             ]
         )
 
-        # Extracting the LLM's response content from the API's output
-        return response.completion['content']
+        return response.content
     except Exception as e:
         # Handle any errors that may occur during the API call
         return {"error": str(e)}
