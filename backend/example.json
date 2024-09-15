@@ -1,0 +1,10 @@
+[
+  { uid : float
+    "abha-id" : String,
+    "name" : String,
+    "phone-number" : String,
+
+
+  }
+
+]

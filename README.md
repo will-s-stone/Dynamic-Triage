@@ -1,3 +1,4 @@
+
 # Dynamic-Triage
 # Telemedicine Hub for Rural India - Problem Statement and Proposed Solution
 
@@ -53,3 +54,4 @@ A **Telemedicine Hub** platform that addresses these challenges through technolo
 - **Accessibility**: Rural patients can access healthcare without the need for high-speed internet, as phone calls and voice-to-text conversions ensure connectivity.
 - **Trust in Healthcare Providers**: Patients will be connected with verified doctors, ensuring trust in the healthcare system.
 - **Reduced Time and Cost**: Patients will save time and money by avoiding unnecessary travel and repeated doctor visits.
+
