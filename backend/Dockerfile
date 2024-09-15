@@ -14,7 +14,7 @@ RUN pip install poetry
 RUN poetry install --no-root --no-dev
 
 # Copy the rest of the application code
-COPY . /app
+COPY dynamic_triage /app
 
 # Expose the port your Flask app runs on
 EXPOSE 5000

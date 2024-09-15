@@ -10,6 +10,9 @@ python = "^3.9"
 flask = "^3.0.3"
 pymongo = "^4.8.0"
 transformers = "^4.44.2"
+vertexai = "^1.66.0"
+google-cloud = "^0.34.0"
+google-cloud-aiplatform = "^1.66.0"
 
 
 [build-system]
